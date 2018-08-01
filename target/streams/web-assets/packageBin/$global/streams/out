@@ -1,0 +1,19 @@
+[0m[[0minfo[0m] [0mPackaging C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\target\scala-2.12\hornbach_timerecording_2.12-1.0-SNAPSHOT-web-assets.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	public/images[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\images[0m
+[0m[[0mdebug[0m] [0m	public/stylesheets\login_style.css[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\stylesheets\login_style.css[0m
+[0m[[0mdebug[0m] [0m	public/images\users_2.png[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\images\users_2.png[0m
+[0m[[0mdebug[0m] [0m	public/images\favicon.png[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\images\favicon.png[0m
+[0m[[0mdebug[0m] [0m	public/javascripts\main.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\javascripts\main.js[0m
+[0m[[0mdebug[0m] [0m	public/stylesheets\main.css[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\stylesheets\main.css[0m
+[0m[[0mdebug[0m] [0m	public/javascripts[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\javascripts[0m
+[0m[[0mdebug[0m] [0m	public/stylesheets[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\admin\Desktop\program\src\backend\hornbach_timeRecording\public\stylesheets[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
