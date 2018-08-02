@@ -5,22 +5,9 @@
 # Map static resources from the /public folder to the /assets URL path
 GET    /assets/*file                               controllers.Assets.versioned(path="/public", file: Asset)
 
-# Routes API Rest DELETEME
-#GET     /employees                  controllers.EmployeeController.list(page: Integer ?= 1, size: Integer ?= 3)
-#GET     /employees/$id<[0-9]+>      controllers.EmployeeController.get(id: Integer)
-#POST    /employees                  controllers.EmployeeController.create()
-#PUT     /employees                  controllers.EmployeeController.update()
-#PATCH   /employees                  controllers.EmployeeController.update()
-#DELETE  /employees/$id<[0-9]+>      controllers.EmployeeController.delete(id: Integer)
 
-# REST API - Employee Analytics
-#GET    /employee/$id<[0-9]+>/weeklyWorkingHours    controllers.EmployeeAnalyticsController.getWeeklyWorkingHours(id: Integer)
-
-
-
-
-# REST API - Employee Time Recording
+# REST API
 GET    /recording/$id<[0-9]+>/projects             controllers.LoginController.getProjects(id: Integer)
 POST   /login                                      controllers.LoginController.authenticate()
-POST   /recording/task                             controllers.LoginController.storeTask()
+POST   /registration                               controllers.RegistrationController.createPartner()
 #POST   /name									   controllers.EmployeeNameController.getFullName()
