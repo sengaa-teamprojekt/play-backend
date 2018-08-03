@@ -16,11 +16,7 @@ import services.DatabaseService2;
  * TODO: Employee- Feature Team
  */
 public class LoginController extends Controller {
-    
-    
 
-
-    
     /**
      * Authenticate method: Gets JSON;
      * parses employeeId and password and compares it with the pw stored in the DB
@@ -30,7 +26,7 @@ public class LoginController extends Controller {
      * Example request: 
      * POST http://localhost:9000/login Headers Content-Type application/json Body {"employeeId":1,"pw":"thomas"} RESPONSE Body {"authenticated":"true"}
      * 
-     */
+
     public Result authenticate() {
         JsonNode json = request().body().asJson();
         String username = json.findPath("username").textValue();
@@ -50,7 +46,7 @@ public class LoginController extends Controller {
             }
         }
     }
-    
+     */
     /**
      * getProjects method taken from EmployeeAnalyticsController: 
      * responses in JSON with all projects included according to employeeId

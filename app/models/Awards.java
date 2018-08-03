@@ -16,7 +16,6 @@ public class Awards extends Model {
     @Column(nullable = false)
     private String title;
 
-
     @Column(nullable = true)
     private String description;
 

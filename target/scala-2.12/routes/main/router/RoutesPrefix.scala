@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/johannesschimmer/hornbach/hornbach_timeRecording/conf/routes
-// @DATE:Tue Jul 17 14:34:33 CEST 2018
+// @SOURCE:/Users/johannesschimmer/play-backend/conf/routes
+// @DATE:Thu Aug 02 17:00:09 CEST 2018
 
 
 package router {

@@ -25,16 +25,15 @@ public class RegistrationController extends Controller {
 
     public Result createPartner() {
         JsonNode json = request().body().asJson();
-        String dateString = json.findPath("date").textValue();
-        String notes = json.findPath("notes").textValue();
-        Double timeSpent = json.findPath("timeSpent").doubleValue();
-        Integer projectId = json.findPath("projectId").intValue();
-        Integer employeeId = json.findPath("employeeId").intValue();
+        String name = json.findPath("name").textValue();
+        String email = json.findPath("email").textValue();
+        String password = json.findPath("password").textValue();
+        String url = json.findPath("url").textValue();
 
-        if (timeSpent == null || dateString == null || notes == null || projectId == null || employeeId == null) {
-            return badRequest("Missing parameter [time], [date], [notes], [projectId] or [employeeId]");
+        if (name == null || email == null || password == null || url == null) {
+            return badRequest("Missing parameter");
         } else {
-            DatabaseService2.insertNewTask(timeSpent, dateString, notes, projectId, employeeId);
+            DatabaseService2.insertNewPartner(name, email, password, url);
             ObjectNode result = Json.newObject();
             result.put("successful", true);
             return ok(result);

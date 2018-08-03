@@ -19,11 +19,27 @@ create table employee (
   constraint pk_employee primary key (id)
 );
 
+create table partner (
+  id                            bigint auto_increment not null,
+  name                          varchar(255) not null,
+  url                           varchar(255) not null,
+  image_file_name               varchar(255),
+  image_content_type            varchar(255),
+  image_file_size               varchar(255),
+  constraint pk_partner primary key (id)
+);
+
 create table project (
   id                            bigint auto_increment not null,
   description                   varchar(255) not null,
   estimated_working_hours       double default 0.00 not null,
   constraint pk_project primary key (id)
+);
+
+create table style (
+  id                            bigint auto_increment not null,
+  name                          varchar(255) not null,
+  constraint pk_style primary key (id)
 );
 
 create table task (
@@ -64,7 +80,11 @@ drop table if exists company;
 
 drop table if exists employee;
 
+drop table if exists partner;
+
 drop table if exists project;
+
+drop table if exists style;
 
 drop table if exists task;
 

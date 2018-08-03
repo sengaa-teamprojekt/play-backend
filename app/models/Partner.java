@@ -35,7 +35,7 @@ public class Partner extends Model {
     @Column(nullable = false)
     private String url;
 
-    @Column(nullable = false)
+  /**  @Column(nullable = false)
     private Formats.DateTime created_at;
 
     @Column(nullable = false)
@@ -52,13 +52,10 @@ public class Partner extends Model {
 
     @Column(nullable = true)
     private Formats.DateTime image_updated_at;
+*/
 
 
-    
-    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
-    private List<Employee> employees;
-
-    public Partner(String name, String url) {
+    public Partner(String name, String email, String password, String url) {
         super();
         this.name = name;
         this.url = url;
