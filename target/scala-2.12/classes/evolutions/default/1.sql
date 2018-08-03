@@ -22,10 +22,9 @@ create table employee (
 create table partner (
   id                            bigint auto_increment not null,
   name                          varchar(255) not null,
+  email                         varchar(255) not null,
+  password                      varchar(255) not null,
   url                           varchar(255) not null,
-  image_file_name               varchar(255),
-  image_content_type            varchar(255),
-  image_file_size               varchar(255),
   constraint pk_partner primary key (id)
 );
 
