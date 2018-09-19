@@ -4,7 +4,7 @@
 		module="hornbach_timerecording$sources_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20180802133801"
+		publication="20180919144152"
 	/>
 	<configurations>
 		<conf name="universal" visibility="public" description=""/>

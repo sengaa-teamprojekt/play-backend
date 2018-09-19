@@ -22,7 +22,7 @@ create table employee (
 create table partner (
   id                            bigint auto_increment not null,
   name                          varchar(255) not null,
-  email                         varchar(255) not null,
+  email                         varchar(255),
   password                      varchar(255) not null,
   url                           varchar(255) not null,
   constraint pk_partner primary key (id)

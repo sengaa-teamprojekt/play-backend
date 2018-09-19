@@ -1,8 +1,8 @@
 package dto;
 
-public class CompanyEmployeeDTO {
+public class Partner {
 
-    public int employeeId;
+
     public String employeeLastName;
     public String employeeName;
     public double workingHoursPerEmployee;

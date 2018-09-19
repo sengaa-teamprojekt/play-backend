@@ -6,7 +6,6 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import services.DatabaseService;
-import services.DatabaseService2;
 
 
 
@@ -19,7 +18,7 @@ public class RegistrationController extends Controller {
      * responses with JSON {"successful" : true} if the storage went good or {"successful" : false} if not
      * Tested with POSTMAN:
      * Example request:
-     * POST http://localhost:9000/recording/task Headers Content-Type application/json Body {"timeSpent" : double, "date" : String, "notes" : String, "projectId" : int, "employeeId" : int} RESPONSE Body {"successful" : boolean}
+     * POST http://localhost:9000/register Headers Content-Type application/json Body {"name", "email" ,"password", "url" : int} RESPONSE Body {"successful" : boolean}
      */
 
 
@@ -33,7 +32,7 @@ public class RegistrationController extends Controller {
         if (name == null || email == null || password == null || url == null) {
             return badRequest("Missing parameter");
         } else {
-            DatabaseService2.insertNewPartner(name, email, password, url);
+            DatabaseService.insertNewPartner(name, email, password, url);
             ObjectNode result = Json.newObject();
             result.put("successful", true);
             return ok(result);

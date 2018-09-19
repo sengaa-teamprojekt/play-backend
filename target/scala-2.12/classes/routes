@@ -8,6 +8,6 @@ GET    /assets/*file                               controllers.Assets.versioned(
 
 # REST API
 #GET    /recording/$id<[0-9]+>/projects             controllers.LoginController.getProjects(id: Integer)
-#POST   /login                                      controllers.LoginController.authenticate()
+POST   /login                                      controllers.LoginController.authenticate()
 POST   /registration                               controllers.RegistrationController.createPartner()
 #POST   /name									   controllers.EmployeeNameController.getFullName()
