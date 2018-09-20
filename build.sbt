@@ -1,23 +1,13 @@
-name := """hornbach_timeRecording"""
-organization := "de.unimannheim"
+name := """sengaa_ath"""
 
-version := "1.0-SNAPSHOT"
+version := "2.6.x"
 
-scalaVersion := "2.12.2"
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
-lazy val myProject = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
+scalaVersion := "2.12.6"
 
-libraryDependencies ++= Seq(
-  jdbc,
-  evolutions,
-  guice,
-  "com.h2database" % "h2" % "1.4.194",
-  javaJpa,
-  "org.hibernate" % "hibernate-core" % "5.2.5.Final",
-  filters
-)
+crossScalaVersions := Seq("2.11.12", "2.12.6")
 
-// Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
-EclipseKeys.preTasks := Seq(compile in Compile, compile in Test)
+testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
 
-PlayKeys.externalizeResources := false
+libraryDependencies += guice

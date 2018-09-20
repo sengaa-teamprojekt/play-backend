@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/johannesschimmer/play-java-forms-example/app/views/listUsers.scala.html:1:1: not found: type form[0m
+[0m[[0m[31merror[0m] [0m[0m@(dummyUser: Seq[User], form: Form[form])[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/johannesschimmer/play-java-forms-example/app/views/listUsers.scala.html:1:36: not found: type form[0m
+[0m[[0m[31merror[0m] [0m[0m@(dummyUser: Seq[User], form: Form[form])[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/johannesschimmer/play-java-forms-example/app/views/listUsers.scala.html:44:2: not found: type form[0m
+[0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/johannesschimmer/play-backend/conf/routes
-// @DATE:Thu Aug 02 17:00:09 CEST 2018
+// @SOURCE:/Users/johannesschimmer/play-java-forms-example/conf/routes
+// @DATE:Wed Sep 19 16:48:42 CEST 2018
 
 
 package router {

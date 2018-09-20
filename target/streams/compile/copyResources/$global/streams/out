@@ -1,10 +1,4 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/logback.xml,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/META-INF,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/META-INF)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/application.conf,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/evolutions,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/evolutions)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/routes,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/routes)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/META-INF/persistence.xml,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/META-INF/persistence.xml)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/evolutions/default,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/evolutions/default)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/evolutions/default/2.sql,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/evolutions/default/2.sql)[0m
-[0m[[0mdebug[0m] [0m	(/Users/johannesschimmer/play-backend/conf/evolutions/default/1.sql,/Users/johannesschimmer/play-backend/target/scala-2.12/classes/evolutions/default/1.sql)[0m
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/johannesschimmer/play-java-forms-example/conf/logback.xml,/Users/johannesschimmer/play-java-forms-example/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/johannesschimmer/play-java-forms-example/conf/application.conf,/Users/johannesschimmer/play-java-forms-example/target/scala-2.12/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/johannesschimmer/play-java-forms-example/conf/routes,/Users/johannesschimmer/play-java-forms-example/target/scala-2.12/classes/routes)[0m

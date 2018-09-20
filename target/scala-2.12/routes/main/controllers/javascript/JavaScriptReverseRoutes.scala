@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/johannesschimmer/play-backend/conf/routes
-// @DATE:Thu Aug 02 17:00:09 CEST 2018
+// @SOURCE:/Users/johannesschimmer/play-java-forms-example/conf/routes
+// @DATE:Wed Sep 19 16:48:42 CEST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,27 +11,47 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:12
-  class ReverseRegistrationController(_prefix: => String) {
+  // @LINE:6
+  class ReverseLoginController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:12
-    def createPartner: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RegistrationController.createPartner",
+    // @LINE:9
+    def listUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.listUsers",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "registration"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user"})
+        }
+      """
+    )
+  
+    // @LINE:6
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+    // @LINE:10
+    def createUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.createUser",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "create"})
         }
       """
     )
   
   }
 
-  // @LINE:6
+  // @LINE:13
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -39,7 +59,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:6
+    // @LINE:13
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -1,36 +1,54 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import models.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import play.data.Form;
+import play.data.FormFactory;
+import play.mvc.*;
 
-import play.libs.Json;
-import play.mvc.Controller;
-import play.mvc.Result;
-import services.DatabaseService;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import java.util.List;
 
+import static play.libs.Scala.asScala;
 
-/**
- * Controller for the TimeRecording-requests (Employee-View).
- * 
- * TODO: Employee- Feature Team
- */
+@Singleton
 public class LoginController extends Controller {
 
+    private final Form<UserData> form;
+    private final List<User> dummyUser;
 
-    public Result authenticate(String email, String password) {
-        JsonNode userPassword = Json.toJson(DatabaseService.authenticate(email));
-        ObjectNode result = Json.newObject();
-        ObjectNode payload = Json.newObject();
-        payload.put("password", email);
-        payload.set("email", userPassword);
-        result.put("header", "email");
-        result.set("payload", payload);
-        return jsonResult(ok(result));
-    }
-    
-    private Result jsonResult(Result httpResponse) {
-        httpResponse.as("application/json; charset=utf-8");
-        return httpResponse;
+    @Inject
+    public LoginController(FormFactory formFactory) {
+        this.form = formFactory.form(UserData.class);
+        this.dummyUser = com.google.common.collect.Lists.newArrayList(
+                new User("User 1", "pw123"),
+                new User("User 2", "pw123"),
+                new User("User 3", "pw123")
+        );
     }
 
+    public Result index() {
+        return ok(views.html.index.render());
+    }
+
+    public Result listUsers() {
+        return ok(views.html.listUsers.render(asScala(dummyUser), form));
+    }
+
+    public Result createUser() {
+        final Form<UserData> boundForm = form.bindFromRequest();
+
+        if (boundForm.hasErrors()) {
+            play.Logger.ALogger logger = play.Logger.of(getClass());
+            logger.error("errors = {}", boundForm.errors());
+            return badRequest(views.html.listUsers.render(asScala(dummyUser), boundForm));
+        } else {
+            UserData data = boundForm.get();
+            dummyUser.add(new User(data.getEmail(), data.getPassword()));
+            flash("info", "User added!");
+            return redirect(routes.LoginController.listUsers());
+        }
+    }
 }

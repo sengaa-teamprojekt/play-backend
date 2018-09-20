@@ -1,0 +1,44 @@
+@(dummyUser: Seq[User], form: Form[UserData])
+
+@main("Users") {
+
+    <h1>Users</h1>
+
+    @* Flash shows updates to a page *@
+    @flash.asScala.map{ case (email, value) =>
+    <div class="@email">@value</div>
+    }
+
+    <table>
+        <thead>
+            <tr><th>Email:</th><th>Password:</th>
+        </thead>
+        <tbody>
+        @for(u <- dummyUser) {
+            <tr><td>@u.email</td><td>@u.password</td></tr>
+        }
+        </tbody>
+    </table>
+
+    <hr/>
+
+    @* Global errors are not tied to any particular form field *@
+    @if(form.hasGlobalErrors) {
+        @form.globalErrors.asScala.map { error: play.data.validation.ValidationError =>
+            <div>
+                @error.key: @error.message
+            </div>
+        }
+    }
+
+    @helper.form(routes.LoginController.createUser) {
+        @helper.CSRF.formField
+
+        @helper.inputText(form("email"))
+
+        @helper.inputText(form("password"))
+
+        <button type="submit">Erstelle User</button>
+    }
+
+}
